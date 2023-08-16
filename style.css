@@ -1,0 +1,160 @@
+  nav {
+   
+    background-color: #fcd6ed;
+    color: rgb(215, 43, 146);
+    font-family: 'Tilt Prism', cursive;
+    font-size: 5px;
+
+  }
+
+
+  footer {
+    background: black;
+    color: white;
+    width: 100%;
+   padding: 2px;
+  }
+
+  nav h1{
+    display: contents;
+    position: absolute; 
+    font-size: 3rem; 
+
+  }
+  #caja {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 7px;
+    padding: 6px;
+    border-radius: 5px;
+    background-color: #fcd6ed;
+    text-align: center;
+  }
+
+
+  .botones{
+  display: flex;
+  flex-direction: row-reverse
+  }
+  .paginado {
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+  .pagination-button:disabled {
+    color: #d1cccc;
+    border-color: #d4cecef7;
+  }
+ 
+  .card-image:hover img {
+    transform: scale(1.3);
+    transition-duration: 0.8s;
+    filter: grayscale(90%);
+  }
+  
+  .card-image {
+    /* max-width: 100%  */
+    overflow: hidden;
+    border:  3px solid rgb(215, 43, 146);
+    box-shadow: 10px 10px 10px 10px rgba(245, 132, 132, 0.66);
+    cursor: pointer;
+    border-radius: 10px 10px 10px 10px;
+    color: black;
+    margin: 3px;
+
+  }   
+
+  .contenedor-paginas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: inherit;
+  }
+
+  .botones #todos {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+    font-family: 'Dancing Script', cursive;
+  } 
+  
+  .botones #hombre {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+    font-family: 'Dancing Script', cursive;
+  } 
+
+  .botones #mujer {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+    font-family: 'Dancing Script', cursive;
+  } 
+
+  .botones #unknown {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+    font-family: 'Dancing Script', cursive;
+  } 
+
+  .botones #Genderless {
+   border: 3px solid;
+   color: rgb(215, 43, 146);
+   border-radius: 7px;
+   font-family: 'Dancing Script', cursive;
+  } 
+
+  .paginado #primera_pagina {
+   border: 3px solid;
+   color: rgb(215, 43, 146);
+   border-radius: 7px;
+  }
+  .paginado #anterior {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+  }
+  .paginado #siguiente {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+  }
+  .paginado #ultima_pagina {
+    border: 3px solid;
+    color: rgb(215, 43, 146);
+    border-radius: 7px;
+  }
+
+
+  @media (max-width: 600px){
+    #caja {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+   
+  @media (max-width: 600px) and (orientation: portrait){
+    .body {
+    flex-direction: column;
+     }
+  }
+ 
+  @media (max-width: 600px) and (orientation: landscape ){
+    .body {
+        flex-direction: column;
+    }
+  }  
+   
+
