@@ -141,29 +141,36 @@ usarFetch(pagina);
 function ultimaPagina () {
     usarFetch(42)
     $siguienteB.disabled = true;
+    $ultimaB.disabled = true
+    pagina = 42
 };
 
-$ultimaB.addEventListener('click',ultimaPagina)
+ $ultimaB.addEventListener('click',ultimaPagina)
 
 
 function anteriorPagina () {
     pagina--;
    
-    if(pagina===42){
-        $anteriorB.disabled = false
-    }else if(pagina===1){
-        $siguienteB.disabled = true;
+  if (pagina===1){
+        $anteriorB.disabled = true
+        $primeraB.disabled = true
     }else{
         $siguienteB.disabled = false
+        $anteriorB.disabled = false
+        $primeraB.disabled = false
+        $ultimaB.disabled = false
     }
     usarFetch(pagina);
 }
 
-$anteriorB.addEventListener('click',anteriorPagina);
+ $anteriorB.addEventListener('click',anteriorPagina);
 
 
 function primeraPagina () {
     usarFetch(1)
+    $anteriorB.disabled = true
+    $primeraB.disabled = true
+     pagina = 1
 };
 
 $primeraB.addEventListener('click',primeraPagina);
@@ -172,13 +179,14 @@ $primeraB.addEventListener('click',primeraPagina);
 function siguientePagina () {
     pagina++;
   
-    if(pagina===2){
-        $anteriorB.disabled = false;
-    }else if(pagina===42){
+    if(pagina===42){
         $siguienteB.disabled = true;
+        $ultimaB.disabled = true
     } else 
-    {
-        $siguienteB.disabled = false;
+    {   $siguienteB.disabled = false
+        $anteriorB.disabled = false
+        $primeraB.disabled = false
+        $ultimaB.disabled = false
     }
     usarFetch(pagina);
 }
@@ -221,19 +229,3 @@ $siguienteB.addEventListener('click',siguientePagina);
 //     mostrar(resultado);
 // };
 
-// let paginado = () => {
-//     if(pagina <= 1){
-//       $anteriorB.disabled = true;
-//       $primeraB.disabled = true;
-//     } else {
-//       $anteriorB.disabled = false;
-//       $primeraB.disabled = false;
-//     }
-//     if(pagina === total ){
-//       $siguienteB.disabled = true
-//       $ultimaB.disabled = true
-//     } else {
-//       $siguienteB .disabled = false
-//       $ultimaB.disabled = false
-//     }
-//   }
